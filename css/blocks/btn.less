@@ -1,0 +1,50 @@
+//main: ../style.less
+
+/*Button*/
+.btn{
+    .font(transparent,'Raleway',@btn-font,normal,700);/*Mixin*/
+    text-transform: uppercase;
+    border:0;
+    background-color:transparent;
+    line-height:1.66;
+    transition:color .2s linear, background .2s linear;
+    cursor:pointer;
+    width:100%;
+    min-width:153px;
+    z-index: 99;
+    
+    &:focus{
+        outline:none;
+    }
+        
+    &::-moz-focus-inner{
+        border:0;
+    }
+    &--white{
+        padding:14px 10px;
+        border-radius: @btn-radius;
+        height: 45px;
+        max-width: 153px;
+        color:#1b1b1b;
+        background-color:@btn-white;
+    }
+    &--white:hover{
+        color:@btn-white;
+        background-color:#1b1b1b;
+    }
+    
+    &--yellow{
+        padding:19px 10px;
+        border-radius: @btn-radius + 3px;
+        height: 54px;
+        max-width: 159px;
+        color:#4f4a37;  
+        background-color:@btn-yellow;
+        margin-bottom:10px;
+    }
+    &--yellow:hover{
+        color:@btn-white;
+        background-color:#4f4a37;
+    }
+}
+

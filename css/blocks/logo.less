@@ -1,0 +1,45 @@
+//main: ../style.less
+/*Logo*/
+.logo_text{
+    .font(#4f4a37,'Lato',1.428rem,normal,700);/*Mixin*/
+    position: relative;
+    top:50%;
+    left: 0;
+    transform: translateY(-50%);
+    a{
+    text-decoration: none;
+    color:#4f4a37;
+    
+    &:before{
+        content: "";
+        display: block;
+        background:url("../image/logo.png") no-repeat;
+        background-size:cover;
+        margin:0 auto;
+        width:53px;
+        height:53px;
+        margin-bottom: 10px;
+    }
+    }
+}
+.logo{
+    text-align: center;
+    position: relative;
+    top:0;
+    left:0;
+    z-index:113;
+    background-color:@color-secondary;
+    width:100px;
+    height:130px;
+    padding: 0 23.5px;
+    &--footer{
+          position: relative;
+        margin-right: 160px;
+        @media @mobile-sm{
+            margin-right:50px; 
+        }
+         @media @mobile-xsmall{
+            margin-right:25px; 
+        }
+    }
+}

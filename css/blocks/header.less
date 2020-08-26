@@ -1,0 +1,70 @@
+//main: ../style.less
+
+/*Header*/
+.header{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    height: 107px;
+    z-index:100;
+    border-bottom:1px solid rgba(255,255,255,0.5);
+        @media @mobile{
+            background-color:fade(#fff,40%);
+        }
+    &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:1;
+        background:linear-gradient(to top, transparent, #000000);
+        height: 310px;
+        opacity: .7;
+            @media @mobile{
+               background:none;
+            }
+    
+    }   
+    /*if add class fixed*/
+    &.fixed{
+    background-color:fade(#fff,40%);
+    position: fixed;
+    &:before{
+        background:none;
+        height: 0;
+    } 
+    &.fixed .nav__link{
+        color:#333;
+        font-weight: 700;
+    
+    }
+        
+   
+}
+}
+
+
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+
+    @media @mobile-xsmall{
+        justify-content: flex-start;
+    }
+}
+
+  
+
+
+
+
+
+
+
+

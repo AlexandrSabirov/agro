@@ -1,0 +1,59 @@
+//main: ../style.less
+/*Gallery*/
+.gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.gallery__item{
+    width: 25%;
+    position: relative;
+    z-index: 1;
+    &:hover .bg__item__gallery{
+    opacity: .7;
+    }
+     &:hover .gallery__info{
+        opacity: 1;   
+        pointer-events:auto;
+    }
+    @media @mobile{
+        width: 50%;
+    }
+    @media @mobile-xsmall{
+        width: 100%;
+    }
+}
+.bg__item__gallery{
+        display: block;
+        background-color:#1f130d;
+        opacity:0;
+        position:absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        transition:opacity .2s linear;
+}
+ 
+.gallery__img{
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+
+}
+.gallery__info{
+    .font(#fff,'Raleway',18px,normal,700);
+    position: absolute;
+    top:50%;
+    left:50%;
+    z-index: 4;
+    transform:translate3d(-50%,-50%,0);
+    opacity: 0;
+    cursor: pointer;
+    pointer-events:none;
+    transition:opacity .2s linear;
+}
